@@ -21,30 +21,11 @@
   box-sizing: border-box;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-}
-
-.top-body-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.top-title {
   margin-top: 20px;
 }
 
-.top-body {
-  justify-content: start;
-}
-
-.button-group {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-}
-
-.top-button {
+.top-btn-group {
   font-size: 14px;
   padding: 5px 0;
   margin: 10px 0;
