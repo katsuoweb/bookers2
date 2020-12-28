@@ -22,15 +22,27 @@
               <li>
                 <%= link_to " Home", root_path, class: "fas fa-home nav-link text-light" %>
               </li>
-              <li>
-                <%= link_to " About", home_about_path, class: "fas fa-link nav-link text-light" %>
-              </li>
-              <li>
-                <%= link_to " sign up", root_path, class: "fas fa-user-plus nav-link text-light" %>
-              </li>
-              <li>
-                <%= link_to " login", root_path, class: "fas fa-sign-in-alt nav-link text-light" %>
-              </li>
+              <% if user_signed_in? %>
+                <li>
+                  <%= link_to " User", home_about_path, class: "fas fa-link nav-link text-light" %>
+                </li>
+                <li>
+                  <%= link_to " Books", root_path, class: "fas fa-user-plus nav-link text-light" %>
+                </li>
+                <li>
+                  <%= link_to " logout", root_path, class: "fas fa-sign-in-alt nav-link text-light" %>
+                </li>
+              <% else %>
+                <li>
+                  <%= link_to " About", home_about_path, class: "fas fa-link nav-link text-light" %>
+                </li>
+                <li>
+                  <%= link_to " sign up", root_path, class: "fas fa-user-plus nav-link text-light" %>
+                </li>
+                <li>
+                  <%= link_to " login", root_path, class: "fas fa-sign-in-alt nav-link text-light" %>
+                </li>
+              <% end %>
             </ul>
           </div>
         </div>
