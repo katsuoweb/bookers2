@@ -19,6 +19,24 @@
     </div>
     <div class="col-md-8 offset-md-1">
       <h2>Users</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>image</th>
+            <th>name</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <% @users.each do |user| %>
+            <td>NO IMAGE</td>
+            <td><%= user.name %></td>
+            <td>Show</td>
+            <% end %>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
