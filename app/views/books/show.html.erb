@@ -53,7 +53,7 @@
               <%= link_to "Edit", edit_book_path(@book), class: "btn btn-sm btn-success" %>
             </td>
             <td>
-              <%= link_to "Destoy", edit_book_path(@book), class: "btn btn-sm btn-danger" %>
+              <%= link_to "Destoy", book_path(@book), method: :delete, data: { confirm: "本当に消しますか？" }, class: "btn btn-sm btn-danger" %>
             </td>
           </tr>
         </tbody>
