@@ -50,7 +50,7 @@
           <tr>
             <% @books.each do |book| %>
             <td>NO IMAGE</td>
-            <td><%= book.title %></td>
+            <td><%= link_to "#{book.title}", book_path(book) %></td>
             <td><%= book.opinion %></td>
             <% end %>
           </tr>
