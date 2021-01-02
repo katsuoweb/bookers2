@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   get 'users/:id/edit' => 'users#edit', as: :edit_user
   patch 'users/:id' => 'users#update'
 
-  resources :books, only: [:create, :index, :show, :edit, :destroy]
+  resources :books, only: [:create, :index, :show, :edit, :update, :destroy]
 end
