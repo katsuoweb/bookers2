@@ -62,3 +62,12 @@
 .user-image {
   margin-bottom: 16px;
 }
+
+#error_explanation {
+  color: red;
+
+  ul {
+    padding-left: 40px;
+    margin-bottom: 16px;
+  }
+}

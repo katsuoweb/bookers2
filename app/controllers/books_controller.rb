@@ -2,13 +2,16 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     @book.user_id = current_user.id
-    @book.save
-    redirect_to book_path(@book)
+    if @book.save
+      redirect_to book_path(@book)
+    else
+      redirect_to books_path, flash: { count: @book.errors.count, messages: @book.errors.full_messages }
+    end
   end
 
   def index
     @user = User.find(current_user.id)
-    @new_book = Book.new
+    @book = Book.new
     @books = Book.all
   end
 
