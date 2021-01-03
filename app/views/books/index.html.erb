@@ -1,6 +1,6 @@
 <div class="container px-5 px-sm-0 margin-top">
   <% if flash[:count] %>
-    <div id="error_explanation">
+    <div class="error_explanation">
       <h3><%= flash[:count] %>  error prohibited this obj from being saved:</h3>
       <ul>
         <% flash[:messages].each do |message| %>
