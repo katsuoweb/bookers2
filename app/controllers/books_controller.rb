@@ -26,7 +26,7 @@ class BooksController < ApplicationController
   def edit
     @book = Book.find(params[:id])
     if @book.user_id != current_user.id
-      redirect_back(fallback_location: book_path(@book))
+      redirect_back(fallback_location: books_path)
     end
   end
 
