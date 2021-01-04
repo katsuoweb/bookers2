@@ -35,7 +35,12 @@ class BooksController < ApplicationController
     if @book.update(book_params)
       redirect_to book_path(@book), notice: "You have updated book successfully."
     else
-      redirect_to edit_book_path(@book), flash: { count: @book.errors.count, messages: @book.errors.full_messages }
+      redirect_to book_path(@book), flash: {
+        count: @book.errors.count,
+        messages: @book.errors.full_messages,
+        input_title: book_params[:title],
+        input_body: book_params[:body],
+      }
     end
   end
 
