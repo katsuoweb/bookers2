@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to user_path(@user), notice: "You have updated user successfully."
     else
-      redirect_to edit_user_path(@user), flash: { count: @user.errors.count, messages: @user.errors.full_messages }
+      redirect_to user_path(@user), flash: { count: @user.errors.count, messages: @user.errors.full_messages, input_name: user_params[:name] }
     end
   end
 
